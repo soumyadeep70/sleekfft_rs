@@ -2,7 +2,7 @@ use std::arch::x86_64::{
     _mm_add_pd as add_f64x2, _mm_sub_pd as sub_f64x2, _mm_set1_pd as set1_f64,
     _mm_loadu_pd as loadu_f64x2, _mm_mul_pd as mul_f64x2, _mm_storeu_pd as storeu_f64x2,
 };
-use crate::sleekfft::fft::Radix4Fft;
+use crate::fft::Radix4Fft;
 
 pub(crate) struct FftSse;
 

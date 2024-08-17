@@ -3,7 +3,7 @@ use std::arch::x86_64::{
     _mm256_loadu_pd as loadu_f64x4, _mm256_mul_pd as mul_f64x4, _mm256_storeu_pd as storeu_f64x4,
     _mm256_sub_pd as sub_f64x4,
 };
-use crate::sleekfft::fft::Radix4Fft;
+use crate::fft::Radix4Fft;
 
 pub(crate) struct FftAvx;
 
