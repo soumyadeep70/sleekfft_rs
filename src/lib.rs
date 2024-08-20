@@ -14,8 +14,9 @@
 //! platform it will use scalar operations.
 //!
 
-mod generic;
-mod x86;
+mod traits;
+mod traits_impl_generic;
+mod traits_x86_impl;
 mod fft;
 
 pub use self::fft::Fft;

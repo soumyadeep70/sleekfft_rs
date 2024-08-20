@@ -1,15 +1,7 @@
 use std::f64::consts::PI;
-use crate::generic::fft_gen::FftGeneric;
-use crate::x86::{
-    fft_sse::FftSse,
-    fft_avx::FftAvx,
-    fft_avx_fma::FftAvxFma,
-};
-
-pub(crate) trait Radix4Fft {
-    unsafe fn fwd_transform(&self, wr: &Vec<f64>, wi: &Vec<f64>, sr: &mut Vec<f64>, si: &mut Vec<f64>, k: usize);
-    unsafe fn inv_transform(&self, wr: &Vec<f64>, wi: &Vec<f64>, sr: &mut Vec<f64>, si: &mut Vec<f64>, k: usize);
-}
+use crate::traits::Radix4Fft;
+use crate::traits_impl_generic::FftGeneric;
+use crate::traits_x86_impl::{FftSse, FftAvx, FftAvxFma};
 
 pub struct Fft {
     wr: Vec<f64>,

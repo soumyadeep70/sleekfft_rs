@@ -1,4 +1,4 @@
-use crate::fft::Radix4Fft;
+use crate::traits::Radix4Fft;
 
 pub(crate) struct FftGeneric;
 
